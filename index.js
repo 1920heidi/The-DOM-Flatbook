@@ -49,12 +49,15 @@ const bookStoreTitle = document.getElementById("header");
 
 // Change header text to bookstore name
 bookStoreTitle.textContent = bookStore.name;
+console.log("Header updated to:", bookStore.name);
 
 // Select the book list container
 const bookList = document.getElementById("book-list");
+console.log("Total books to process:", bookStore.books.length);
 
 // Loop through each book
 bookStore.books.forEach((book) => {
+  console.log("Processing book:", book.title);
   
   // Create elements
   const bookContainer = document.createElement("li");
@@ -74,5 +77,6 @@ bookStore.books.forEach((book) => {
 
   // Append container to list
   bookList.appendChild(bookContainer);
+  console.log("Book added to DOM:", book.title);
 });
 
